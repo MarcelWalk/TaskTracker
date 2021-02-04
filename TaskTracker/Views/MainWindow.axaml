@@ -21,7 +21,7 @@
       <RowDefinition Height="1*" />
       <RowDefinition Height="50" />
     </Grid.RowDefinitions>
-    <Border Margin="5" Grid.Row="0" CornerRadius="2" BorderBrush="Gray" BorderThickness="1">
+    <Border Margin="5" Grid.Row="0" CornerRadius="2" BorderBrush="#dbdbdb" BorderThickness="1">
       <Grid>
         <Grid.ColumnDefinitions>
           <ColumnDefinition Width="2*"/>
@@ -33,7 +33,7 @@
       </Grid>
     </Border>
 
-    <Border Margin="5,5,5,0" Background="#e0c2ff" CornerRadius="2,2,0,0" Grid.Row="1" BorderThickness="1,1,1,0" BorderBrush="Gray">
+    <Border Margin="5,5,5,0" Background="#dbdbdb" CornerRadius="2,2,0,0" Grid.Row="1" BorderThickness="1,1,1,0" BorderBrush="#dbdbdb">
       <Grid>
         <Grid.ColumnDefinitions>
           <ColumnDefinition Width="2*"/>
@@ -43,9 +43,25 @@
         <Label Grid.Column="1" Content="00:00" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10,0,10,0"></Label>
       </Grid>
     </Border>
-    <ListBox Margin="5,0,5,5" Grid.Row="2" BorderBrush="Gray" BorderThickness="1,1,1,1">
+    <Border Margin="5,0,5,5" Grid.Row="2" BorderBrush="#dbdbdb" BorderThickness="1">
+      <ScrollViewer   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <ListBox Background="White" BorderThickness="0">
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+          <Button></Button>
+        </ListBox>
+      </ScrollViewer>
+    </Border>
 
-    </ListBox>
     <Grid Margin="0" Grid.Row="3">
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="1*"/>
