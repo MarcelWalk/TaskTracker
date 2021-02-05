@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using System;
 
 namespace TaskTracker.Views
 {
@@ -9,9 +10,9 @@ namespace TaskTracker.Views
         public MainWindow()
         {
             InitializeComponent();
-#if DEBUG
+            #if DEBUG
             this.AttachDevTools();
-#endif
+            #endif
         }
 
         private void InitializeComponent()

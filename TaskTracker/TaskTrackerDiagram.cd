@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="UI Elements">
+    <Position X="9.146" Y="0.5" Height="0.291" Width="1.7" />
+  </Comment>
+  <Comment CommentText="ViewModels">
+    <Position X="3.187" Y="0.5" Height="0.291" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Models">
+    <Position X="5.187" Y="0.5" Height="0.291" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Objects">
+    <Position X="7.135" Y="0.5" Height="0.291" Width="1.7" />
+  </Comment>
+  <Class Name="TaskTracker.Models.Timer">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAQAAQAAAABAIAAgQIABkAAABAAAACAAAAIgAEA=</HashCode>
+      <FileName>Models\Timer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TaskTracker.ViewModels.MainWindowViewModel">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskTracker.TrackingEntry">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\TrackingEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskTracker.Models.Serializer">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Serializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaskTracker.Views.MainWindow">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainWindow.axaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

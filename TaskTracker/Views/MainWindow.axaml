@@ -14,12 +14,12 @@
   <Design.DataContext>
     <vm:MainWindowViewModel/>
   </Design.DataContext>
+
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="60" />
       <RowDefinition Height="60" />
       <RowDefinition Height="1*" />
-      <RowDefinition Height="50" />
     </Grid.RowDefinitions>
     <Border Margin="5" Grid.Row="0" CornerRadius="2" BorderBrush="#dbdbdb" BorderThickness="1">
       <Grid>
@@ -28,8 +28,13 @@
           <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox Grid.Column="0" PlaceholderText="What's up?" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0"></ComboBox>
-        <Button Grid.Column="1" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Start!" Foreground="White" Background="#7b03f4"></Button>
+        <TextBox Grid.Column="0" IsEnabled="{Binding !Timer.IsRunning}" Text="{Binding TaskName}" Watermark="What's up?" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0"></TextBox>
+        <Button Grid.Column="1" Command="{Binding BtnAddClicked}" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Start!" Foreground="White" Background="#86a6f0">
+          <Panel>
+            <Label IsVisible="{Binding !Timer.IsRunning}" Content="Start" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label IsVisible="{Binding Timer.IsRunning}" Content="{Binding Timer.TrackedTimeString}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+          </Panel>
+        </Button>
       </Grid>
     </Border>
 
@@ -40,37 +45,14 @@
           <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" Content="Today" VerticalContentAlignment="Center" Margin="10,0,0,0"></Label>
-        <Label Grid.Column="1" Content="00:00" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10,0,10,0"></Label>
+        <Label Grid.Column="1" Content="{Binding Timer.TotalTrackedTimeString}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="10,0,10,0"></Label>
       </Grid>
     </Border>
     <Border Margin="5,0,5,5" Grid.Row="2" BorderBrush="#dbdbdb" BorderThickness="1">
       <ScrollViewer   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-        <ListBox Background="White" BorderThickness="0">
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-          <Button></Button>
-        </ListBox>
+        <ItemsControl Background="White" Items="{Binding Timer.ListEntries}">
+        </ItemsControl>
       </ScrollViewer>
     </Border>
-
-    <Grid Margin="0" Grid.Row="3">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*"/>
-        <ColumnDefinition Width="1*"/>
-        <ColumnDefinition Width="1*"/>
-      </Grid.ColumnDefinitions>
-      <Button Content="Add" Foreground="WhiteSmoke" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" Background="#7b03f4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-      <Button Content="Edit" Foreground="WhiteSmoke" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" Background="#7b03f4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-      <Button Content="Delete" Foreground="WhiteSmoke" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" Background="#7b03f4" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-    </Grid>
   </Grid>
 </Window>
